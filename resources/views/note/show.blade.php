@@ -2,7 +2,7 @@
     <div class="body">
         <div class="note">
             <div class="note-body">
-                {{ $note->note }}
+                {!! nl2br(e($note->note)) !!}
             </div>
             <div class="option">
                 <a href="{{ route('note.index') }}" class="button-edit">Back</a>

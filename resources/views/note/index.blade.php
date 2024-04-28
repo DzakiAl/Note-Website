@@ -4,7 +4,7 @@
         @foreach ($notes as $note)
             <div class="note">
                 <div class="note-body">
-                    {{ Str::words($note->note, 30) }}
+                    {!! nl2br(e(Str::words($note->note, 30))) !!}
                 </div>
                 <div class="option">
                     <a href="{{ route('note.show', $note) }}" class="button-view">View</a>
